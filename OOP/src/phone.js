@@ -28,34 +28,19 @@ Phone.prototype = {
      displayMessage:function (senderNumber, message) {
        return ("Message from " + senderNumber + " " + message);
      },
-     /*addContact:function (firstName, lastName, number) {
+     addContact:function (firstName, lastName, number) {
        this.contacts.firstName = number;
-       return this.viewContacts();
+       return firstName + " added to contacts";
      },
-     deleteContact:function (firstName) {
-       delete this.contacts.this.firstName;
-       return viewContacts();
-     },*/
+     deleteContact:function (firstName, lastName) {
+       delete this.contacts.firstName;
+       return firstName + " deleted from contacts";
+     },
      viewContacts:function () {
        return "These are your contacts";
      }
 } 
 
-// Implementing Inheritance. SmartPhone class inherits from Phone super class
-function SmartPhone(theModel, theManufacturer, theImei) {
-  Phone.call(this, theModel, theManufacturer, theImei);
-};
 
-SmartPhone.Prototype = new Phone();
 
-SmartPhone.prototype.sendMessage = function (emailAddress) { // Method overriding. sendMessage overrides the sendMessage method from the Phone class
-  if (this.emailAddress) {                // and polymorphism. sendMessage can send both emails and SMS
-  return "Your mail has been sent to " + this.emailAddress;
-  }
-  else{
-    this.sendMessage();
-  }
-  
-
-}
 module.exports = Phone;
