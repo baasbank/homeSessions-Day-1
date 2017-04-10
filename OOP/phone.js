@@ -25,10 +25,13 @@ Phone.prototype = {
      },
      addContact:function (firstName, lastName, number) {
        this.contacts.this.firstName = this.number;
-       return this.contacts;
+       return viewContacts();
      },
      deleteContact:function (firstName) {
        delete this.contacts.this.firstName;
+       return viewContacts();
+     },
+     viewContacts:function () {
        return this.contacts;
      }
 }
