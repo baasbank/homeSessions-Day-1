@@ -9,4 +9,7 @@ Phone.prototype = {
      makeCall:function (numberToCall)  { 
          return "You're connected to " + this.numberToCall; 
      },
+     receiveCall:function ()  { 
+         return "Call received"; 
+     }, 
 }
