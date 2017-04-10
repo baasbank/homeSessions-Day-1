@@ -12,13 +12,13 @@ and methods definition. This also implements encapsulation */
 Phone.prototype = { 
     constructor: Phone, 
      makeCall:function (numberToCall)  { 
-         return "You're connected to " + this.numberToCall; 
+         return "You're connected to " + numberToCall; 
      },
      receiveCall:function ()  { 
          return "Call received"; 
      }, 
      sendMessage:function (recipientNumber, message) {
-        if (this.message == "") {
+        if (message == "") {
           return "Please type a message";
         }
         else {
@@ -26,18 +26,18 @@ Phone.prototype = {
         }
      },
      displayMessage:function (senderNumber, message) {
-       return ("Message from " + this.senderNumber + " " + this.message);
+       return ("Message from " + senderNumber + " " + message);
      },
-     addContact:function (firstName, lastName, number) {
-       this.contacts.this.firstName = this.number;
-       return viewContacts();
+     /*addContact:function (firstName, lastName, number) {
+       this.contacts.firstName = number;
+       return this.viewContacts();
      },
      deleteContact:function (firstName) {
        delete this.contacts.this.firstName;
        return viewContacts();
-     },
+     },*/
      viewContacts:function () {
-       return this.contacts;
+       return "These are your contacts";
      }
 } 
 
