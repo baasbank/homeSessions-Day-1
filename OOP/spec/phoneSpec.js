@@ -48,7 +48,18 @@ let Phone = require ('../src/phone');
         var nokia = new Phone('3310', 'Nokia', 1323989728);
         expect(nokia.viewContacts()).toBe("These are your contacts");
       });
+       it("should return 'Baasbank added to contacts' when Baasbank is added" , function(){
+        var nokia = new Phone('3310', 'Nokia', 1323989728);
+        expect(nokia.addContact("Baasbank", "Akinmuleya", 8131326411)).toBe("Baasbank added to contacts");
+      });
+      it("should return 'Baasbank deleted from contacts' when Baasbank Akinmuleya is deleted" , function(){
+        var nokia = new Phone('3310', 'Nokia', 1323989728);
+        expect(nokia.deleteContact("Baasbank", "Akinmuleya")).toBe("Baasbank deleted from contacts");
+      });
+      it("should return 'These are your contacts' when contacts are viewed" , function(){
+        var nokia = new Phone('3310', 'Nokia', 1323989728);
+        expect(nokia.viewContacts()).toBe("These are your contacts");
+      });
     });
-
+    
     });
- 
