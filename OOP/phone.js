@@ -34,4 +34,21 @@ Phone.prototype = {
      viewContacts:function () {
        return this.contacts;
      }
+} 
+
+function SmartPhone(theModel, theManufacturer, theImei) {
+  Phone.call(this, theModel, theManufacturer, theImei);
+};
+
+inheritPrototype(SmartPhone, Phone);
+
+SmartPhone.prototype.sendMessage = function (emailAddress) {
+  if (this.emailAddress) {
+  return "Your mail has been sent to " + this.emailAddress;
+  }
+  else{
+    this.sendMessage();
+  }
+  
+
 }
