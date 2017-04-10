@@ -58,3 +58,4 @@ SmartPhone.prototype.sendMessage = function (emailAddress) { // Method overridin
   
 
 }
+module.exports = phone;
