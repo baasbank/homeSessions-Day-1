@@ -23,5 +23,8 @@ Phone.prototype = {
      displayMessage:function (senderNumber, message) {
        return ("Message from " + this.senderNumber + " " + this.message);
      },
+     addContact:function (firstName, lastName, number) {
+       this.contacts.this.firstName = this.number;
+     },
      
 }
