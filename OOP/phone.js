@@ -12,4 +12,12 @@ Phone.prototype = {
      receiveCall:function ()  { 
          return "Call received"; 
      }, 
+     sendMessage:function (recipientNumber, message) {
+        if (this.message == "") {
+          return "Please type a message";
+        }
+        else {
+          return "Message sent";
+        }
+     },
 }
