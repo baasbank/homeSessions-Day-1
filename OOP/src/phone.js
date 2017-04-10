@@ -46,7 +46,7 @@ function SmartPhone(theModel, theManufacturer, theImei) {
   Phone.call(this, theModel, theManufacturer, theImei);
 };
 
-inheritPrototype(SmartPhone, Phone);
+SmartPhone.Prototype = new Phone();
 
 SmartPhone.prototype.sendMessage = function (emailAddress) { // Method overriding. sendMessage overrides the sendMessage method from the Phone class
   if (this.emailAddress) {                // and polymorphism. sendMessage can send both emails and SMS
@@ -58,4 +58,4 @@ SmartPhone.prototype.sendMessage = function (emailAddress) { // Method overridin
   
 
 }
-module.exports = phone;
+module.exports = Phone;
