@@ -20,4 +20,8 @@ Phone.prototype = {
           return "Message sent";
         }
      },
+     displayMessage:function (senderNumber, message) {
+       return ("Message from " + this.senderNumber + " " + this.message);
+     },
+     
 }
